@@ -129,7 +129,7 @@ int main(){
 		
 		printf("Cartório da EBAC \n\n\n");//menu inicial
 		printf("Selecione a opção desejada no menu\n\n");
-		printf("\t1 - Registrar Nomes\n \t2 - Consultar Nomes\n \t3 - Deletar Nomes\n");
+		printf("\t1 - Registrar Nomes\n \t2 - Consultar Nomes\n \t3 - Deletar Nomes\n \t4 - Sair\n\n");
 		printf("Opção : ");
 		scanf("%d", &opcao);//fim do menu inicial
 		
@@ -137,19 +137,29 @@ int main(){
 		
 		//inicio das condições
 		switch(opcao){
+			
 			case 1:
-			registrar();
-			break;
+				registrar();
+				break;
+			
 		 	case 2:
-			consultar();
-			break;
+				consultar();
+				break;
+			
 			case 3:
-			deletar();
-			break;
+				deletar();
+				break;
+			
+			case 4:
+				printf("Obrigado por utilizar o nosso sistema!\n");
+				return 0;
+				break;
+			
 			default:
-			printf("Você escolheu uma opção inexistente!\n\n");
-			system("pause");
-			break;
+				printf("Você escolheu uma opção inexistente!\n\n");
+				system("pause");
+				break;
+				
 		}//fim das condições
 	}
 
