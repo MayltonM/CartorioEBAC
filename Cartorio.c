@@ -87,6 +87,7 @@ int consultar(){
 	while(fgets(conteudo, 200, file)!=NULL){
 		printf("\n Essas são as informações do usuário: ");
 		printf("%s", conteudo);
+		fclose(file);
 		printf("\n\n");
 	}
 	
@@ -112,6 +113,7 @@ int deletar(){
 		printf("O usuário não se encontra no sistema!.\n");
 		system("pause");
 	}else{
+		fclose(file);
 		remove(cpf);
 		printf("O usuário removido do sistema!.\n");
 		system("pause");
@@ -128,8 +130,6 @@ int main(){
 	char senhadigitada[] = "admin";
 	int comparacao;
 	
-	system("cls");
-	
 	printf("Cartório da EBAC \n\n\n");
 	printf("Digite sua senha de administrador para utilizar o sistema!\n\n");
 	scanf("%s",senhadigitada);
@@ -137,6 +137,8 @@ int main(){
 	comparacao = strcmp(senhadigitada,"admin");
 	
 	if(comparacao==0){
+		
+		system("cls");
 	
 		for(x=1;x=1;){
 			
@@ -179,10 +181,8 @@ int main(){
 			
 		}
 	
-	}else
-			
+	}else			
 		printf("Senha incorreta!\n");
-		system("pause");
-		main();
+
 
 }
